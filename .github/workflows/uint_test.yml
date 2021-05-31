@@ -4,7 +4,10 @@ jobs:
   uint_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: niiaaip/release-software@main
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Push Firmware And INFO
+        uses: niiaaip/release-software@main
         with:
           args: test_v1.1.1.bin
           aliyun_oss_endpoint: ${{ secrets.ALIYUN_OSS_ENDPOINT }}

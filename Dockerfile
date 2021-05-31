@@ -8,7 +8,7 @@ RUN apk add curl && \
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 
-VOLUME ["$GITHUB_WORKSPACE","$GITHUB_WORKSPACE"]
+# VOLUME ["$GITHUB_WORKSPACE","$GITHUB_WORKSPACE"]
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
