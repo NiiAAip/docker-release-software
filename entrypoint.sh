@@ -1,12 +1,12 @@
 #!/bin/sh -l
 
-VERSION=`echo $@ | grep -E '[0-9]+\.[0-9]+\.[0-9]+' -o`
-JOB_ID=`stat -c %Y $@`
-MD5=`md5sum $@ | cut -d ' ' -f 1`
+VERSION=`echo $GITHUB_WORKSPACE/$@ | grep -E '[0-9]+\.[0-9]+\.[0-9]+' -o`
+JOB_ID=`stat -c %Y $GITHUB_WORKSPACE/$@`
+MD5=`md5sum $GITHUB_WORKSPACE/$@ | cut -d ' ' -f 1`
 PATH_=$INPUT_ALIYUN_OSS_URL
 
 ossutil64 config -e $INPUT_ALIYUN_OSS_ENDPOINT -i $INPUT_ALIYUN_ACCESS_ID -k $INPUT_ALIYUN_ACCESS_SECRET -L CH
-ossutil64 cp -rf $@ $INPUT_ALIYUN_OSS_URL
+ossutil64 cp -rf $GITHUB_WORKSPACE/$@ $INPUT_ALIYUN_OSS_URL
 if [ $? ]; then
     exit 1
 fi
