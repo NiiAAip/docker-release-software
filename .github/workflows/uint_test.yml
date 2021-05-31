@@ -7,11 +7,11 @@ jobs:
       - uses: niiaaip/release-software@main
         with:
           args: test_v1.1.1.bin
-          aliyunOssEndpoint: ${{ secrets.ALIYUN_OSS_ENDPOINT }}
-          aliyunAccessId: ${{ secrets.ALIYUN_ACCESS_ID }}
-          aliyunAccessSecret: ${{ secrets.ALIYUN_ACCESS_SECRET }}
-          aliyunOssUrl: ${{ secrets.ALIYUN_OSS_URL }}
-          otaServerUrl: ${{ secrets.OTA_SERVER_URL }}
-          otaServerUser: ${{ secrets.OTA_SERVER_USER }}
-          otaServerPwd: ${{ secrets.OTA_SERVER_PWD }}
-          otaSoftwareToken: ${{ secrets.OTA_SOFTWARE_TOKEN }}
+          aliyun_oss_endpoint: ${{ secrets.ALIYUN_OSS_ENDPOINT }}
+          aliyun_access_id: ${{ secrets.ALIYUN_ACCESS_ID }}
+          aliyun_access_secret: ${{ secrets.ALIYUN_ACCESS_SECRET }}
+          aliyun_oss_url: ${{ secrets.ALIYUN_OSS_URL }}
+          ota_server_url: ${{ secrets.OTA_SERVER_URL }}
+          ota_server_user: ${{ secrets.OTA_SERVER_USER }}
+          ota_server_pwd: ${{ secrets.OTA_SERVER_PWD }}
+          ota_software_token: ${{ secrets.OTA_SOFTWARE_TOKEN }}
