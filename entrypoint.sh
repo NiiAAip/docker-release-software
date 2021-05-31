@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-VERSION=`echo $@ | grep -P '[0-9]+\.[0-9]+\.[0-9]+' -o`
+VERSION=`echo $@ | grep -E '[0-9]+\.[0-9]+\.[0-9]+' -o`
 JOB_ID=`stat -c %Y $@`
 MD5=`md5sum $@ | cut -d ' ' -f 1`
 PATH_=$INPUT_ALIYUN_OSS_URL
