@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  uint_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: niiaaip/release-software@main
+        with:
+          args: test_v1.1.1.bin
+          aliyunOssEndpoint: ${{ secrets.ALIYUN_OSS_ENDPOINT }}
+          aliyunAccessId: ${{ secrets.ALIYUN_ACCESS_ID }}
+          aliyunAccessSecret: ${{ secrets.ALIYUN_ACCESS_SECRET }}
+          aliyunOssUrl: ${{ secrets.ALIYUN_OSS_URL }}
+          otaServerUrl: ${{ secrets.OTA_SERVER_URL }}
+          otaServerUser: ${{ secrets.OTA_SERVER_USER }}
+          otaServerPwd: ${{ secrets.OTA_SERVER_PWD }}
+          otaSoftwareToken: ${{ secrets.OTA_SOFTWARE_TOKEN }}
