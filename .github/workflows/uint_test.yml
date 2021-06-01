@@ -7,7 +7,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Push Firmware And INFO
-        uses: niiaaip/release-software@main
+        uses: niiaaip/docker-release-software@main
         with:
           args: test_v1.1.1.bin
           aliyun_oss_endpoint: ${{ secrets.ALIYUN_OSS_ENDPOINT }}
